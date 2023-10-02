@@ -1,0 +1,121 @@
+.payment {
+  padding-bottom: 50px;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #fff;
+  &__logo {
+    width: 170px;
+    margin: auto;
+  }
+  &__title {
+    font-size: 29px;
+    font-weight: bold;
+    @media (max-width: 575px) {
+      font-size: 24px;
+    }
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
+  }
+  &__body {
+    padding-top: 70px;
+    @media (max-width: 575px) {
+      padding-top: 30px;
+    }
+  }
+  &__details {
+    padding-top: 40px;
+    @media (max-width: 575px) {
+      padding-top: 20px;
+    }
+  }
+  &__list {
+    padding-top: 15px;
+    padding-left: 15px;
+    @media (max-width: 575px) {
+      padding-top: 10px;
+      padding-left: 5px;
+    }
+  }
+  &__item {
+    padding: 10px 0;
+    display: flex;
+  }
+  &__link {
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    color: $primary;
+    text-decoration: underline;
+    @at-root {
+      a#{&} {
+        transition: color 0.3s ease;
+        &:hover {
+          @media (hover: hover) and (pointer: fine) {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    @media (max-width: 575px) {
+      font-size: 15px;
+    }
+  }
+  &__price {
+    padding-left: 10px;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  &__txt {
+    font-weight: 500;
+  }
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    &_space_top_30 {
+      padding-top: 30px;
+    }
+  }
+  &__control {
+    padding: 5px;
+    width: width(3, 1);
+    @media (max-width: 575px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    &.active {
+      background-color: $primary;
+      color: #fff;
+      border-color: $primary;
+    }
+  }
+  &__tabs {
+    position: relative;
+    overflow: hidden;
+  }
+  &__view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    padding-top: 30px;
+    &.active {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

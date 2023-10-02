@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Template</title>
+        <link rel="stylesheet" href="{{htmlWebpackPlugin.options.templateParameters.fonts}}/gilroy/stylesheet.css">
+        {% for name, item in bundles.css %}
+            <link rel="stylesheet" href="{{ item }}">
+        {% endfor %}
+    </head>
+    <body>
+        {% set img = htmlWebpackPlugin.options.templateParameters.images %}
+        <main class="main">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% for name, item in bundles.js %}
+            <script src="{{ item }}"></script>
+        {% endfor %}
+
+    </body>
+</html>

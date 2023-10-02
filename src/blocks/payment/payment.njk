@@ -1,0 +1,62 @@
+<div class="container">
+	<div class="payment">
+		<div class="payment__logo">
+			<img src="{{img}}/logo.jpg" alt="" class="_fw">
+		</div>
+		<div class="payment__body">
+			<div class="payment__title">Checkout</div>
+			<div class="payment__details">
+				<div class="payment__subtitle">Products</div>
+				{% set data = [
+					{
+						title: 'Apple - IPad with Retina display WI-FI - 32Gb - White',
+						link: '#',
+						price: '499'
+					}, {
+						title:'16Gb A Series',
+						link:'#',
+						price:'130'
+					}
+				] %}
+				<div class="payment__list">
+					{% for item in data %}
+						<div class="payment__item">
+							<a href="{{item.link}}" class="payment__link">{{item.title}}</a>
+							<div class="payment__price">${{item.price}}</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="payment__details">
+				<div class="payment__subtitle">Shipping Method</div>
+				<div class="payment__list">
+					<div class="payment__item">
+						<div class="payment__txt">FedEx</div>
+						<div class="payment__price">$13.99</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment__details js-simple-tabs">
+				<div class="payment__subtitle">Payment method</div>
+				<div class="payment__controls payment__controls_space_top_30">
+					<div class="payment__control">
+						<button data-tab="credit_card" class="payment__btn btn btn_hover_secondary btn_size_md btn_outline btn_outline_light_primary js-tab-control">Credit card</button>
+					</div>
+					<div class="payment__control">
+						<button data-tab="gift_card" class="payment__btn btn btn_hover_secondary btn_size_md btn_outline btn_outline_light_primary js-tab-control">Gift card</button>
+					</div>
+					<div class="payment__control">
+						<button data-tab="paypal" class="payment__btn btn btn_hover_secondary btn_size_md btn_outline btn_outline_light_primary js-tab-control">PayPal</button>
+					</div>
+				</div>
+				<div class="payment__tabs">
+					<div data-tab="credit_card" class="payment__view js-tab-view">
+						{% include "blocks/credit-card/credit-card.njk" %}
+					</div>
+					<div data-tab="gift_card" class="payment__view js-tab-view">Form with gift card</div>
+					<div data-tab="paypal" class="payment__view js-tab-view">PayPal form</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

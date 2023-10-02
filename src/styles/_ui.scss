@@ -1,0 +1,126 @@
+html,
+body {
+  position: relative;
+  font-family: $main-font;
+  font-weight: 400;
+  line-height: 130%;
+  font-size: 18px;
+  color: $text;
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
+}
+
+.main {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+._fw {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5px;
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  &_outline {
+    border: 1px solid;
+    &_light_primary {
+      border-color: $primary-light;
+    }
+  }
+  &_secondary {
+    background-color: $secondary;
+    color: #fff;
+    @media (pointer: fine) and (hover: hover) {
+      &:hover {
+        background-color: $secondary-dark;
+      }
+    }
+  }
+  &_hover_secondary {
+    @media (pointer: fine) and (hover: hover) {
+      &:hover {
+        background-color: $secondary;
+        color: #fff;
+        border-color: $secondary;
+      }
+    }
+  }
+  &_size_md {
+    padding: 10px 15px;
+  }
+}
+
+.checkbox {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &__input {
+    position: absolute;
+    left: 100%;
+    opacity: 0;
+  }
+  &__input:checked + &__mark:after {
+    opacity: 1;
+  }
+  .error + &__mark {
+    border-color: red;
+  }
+  &__mark {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_primary {
+      border: 1px solid $primary;
+      &:after {
+        background-color: $primary;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: block;
+      opacity: 0;
+    }
+  }
+  &__text {
+    padding-left: 10px;
+    line-height: 110%;
+    display: inline-block;
+    button:hover {
+      color: $primary;
+    }
+  }
+  &__link {
+    display: inline-block;
+    border-bottom: 1px dotted $primary-light;
+  }
+}
+.field-error {
+  padding-top: 5px;
+  color: red;
+  font-size: 11px;
+  line-height: 110%;
+}
