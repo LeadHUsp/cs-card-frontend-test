@@ -82,6 +82,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "tippy.js": "^6.3.7"
+    "tippy.js": "^6.3.7",
+    "vue": "^3.2.41"
   }
 }
