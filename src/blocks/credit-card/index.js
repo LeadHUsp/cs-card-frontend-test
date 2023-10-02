@@ -1,7 +1,7 @@
 import { InputValidate } from '@/js/inputCreadit';
 import { FormValidation } from '@/js/formValidation';
 import tippy from 'tippy.js';
-import JustValidate from 'just-validate';
+
 export class CreditCard {
   constructor() {
     this.block = document.querySelector('.js-credit-payment');
@@ -116,76 +116,4 @@ export class CreditCard {
       policyEl.parentNode.parentNode.querySelector('.field-error')
     );
   };
-  // setupValidation = () => {
-  //   const validator = new JustValidate(this.block, {
-  //     errorFieldCssClass: 'error',
-  //     errorLabelCssClass: 'field-error',
-  //     errorLabelStyle: '',
-  //   });
-  //   validator.onSuccess(() => {
-  //     alert('Form send success');
-  //   });
-  //   validator
-  //     .addField(
-  //       this.creditCardNameEl,
-  //       [
-  //         {
-  //           rule: 'required',
-  //         },
-  //       ],
-  //       {
-  //         errorsContainer: this.creditCardNameEl.parentNode.parentNode,
-  //       }
-  //     )
-  //     .addField(
-  //       this.creditCardEl,
-  //       [
-  //         {
-  //           rule: 'required',
-  //         },
-  //         {
-  //           rule: 'minLength',
-  //           value: 15,
-  //           errorMessage: 'The field must contain 12 characters',
-  //         },
-  //       ],
-  //       {
-  //         errorsContainer: this.creditCardEl.parentNode.parentNode,
-  //       }
-  //     )
-  //     .addField(
-  //       this.creditCardCVVEl,
-  //       [
-  //         {
-  //           rule: 'required',
-  //         },
-  //         {
-  //           rule: 'minLength',
-  //           value: 3,
-  //           errorMessage: 'The field must contain 3 characters',
-  //         },
-  //       ],
-  //       {
-  //         errorsContainer: this.creditCardCVVEl.parentNode.parentNode,
-  //       }
-  //     );
-  //   for (const item of this.creditCardDateEl) {
-  //     validator.addField(item, [
-  //       {
-  //         rule: 'required',
-  //       },
-  //       {
-  //         rule: 'minLength',
-  //         value: 2,
-  //         errorMessage: 'The field must contain 2 characters',
-  //       },
-  //     ]);
-  //   }
-  //   const policyEl = this.block.querySelector('.js-policy-validate');
-  //   validator.addField(policyEl, [
-  //     {
-  //       rule: 'required',
-  //     },
-  //   ]);
-  // };
 }
