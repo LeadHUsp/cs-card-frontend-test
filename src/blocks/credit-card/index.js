@@ -1,4 +1,4 @@
-import { InputValidate } from '@/js/inputValidate';
+import { InputValidate } from '@/js/inputCreadit';
 import tippy from 'tippy.js';
 import JustValidate from 'just-validate';
 export class CreditCard {

@@ -7,7 +7,7 @@ export class InputValidate {
     this.block = block;
     this.options = { ...defaultOptions, ...options };
     this.regexp = new RegExp('^[0-9]$');
-    this.setupListener();
+    this.block && this.setupListener();
   }
   setupListener = () => {
     ['keydown', 'keyup', 'input'].forEach((event) => {
