@@ -1,4 +1,4 @@
-import CreditCardInputMask from 'credit-card-input-mask';
+import { InputValidate } from '@/js/inputValidate';
 import tippy from 'tippy.js';
 import JustValidate from 'just-validate';
 export class CreditCard {
@@ -24,19 +24,14 @@ export class CreditCard {
     }
   };
   setupCreditCardMask = () => {
-    new CreditCardInputMask({
-      element: this.creditCardEl,
-      pattern: '{{9999}} {{9999}} {{9999}} {{9999}}',
-    });
-    new CreditCardInputMask({
-      element: this.creditCardCVVEl,
-      pattern: '{{999}}',
+    new InputValidate(this.creditCardEl);
+    new InputValidate(this.creditCardCVVEl, {
+      maxSize: 3,
     });
 
     for (const item of this.creditCardDateEl) {
-      new CreditCardInputMask({
-        element: item,
-        pattern: '{{99}}',
+      new InputValidate(item, {
+        maxSize: 2,
       });
     }
   };
