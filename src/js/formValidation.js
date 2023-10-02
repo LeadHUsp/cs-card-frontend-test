@@ -11,6 +11,7 @@ export class FormValidation {
   }
   init = () => {
     this.formEl.addEventListener('submit', (e) => {
+      e.preventDefault();
       for (let item of this.state.values()) {
         item.validator();
       }
