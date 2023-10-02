@@ -9,25 +9,29 @@
 							<svg class="credit-card__icon" viewBox="0 0 802 526" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M726.125 0.5H75.9004C34.4754 0.5 0.900391 34.075 0.900391 75.5V450.5C0.900391 491.925 34.4754 525.5 75.9004 525.5H726.125C767.55 525.5 801.125 491.925 801.125 450.5V75.5C801.125 34.075 767.55 0.5 726.125 0.5ZM75.8754 50.5H726.1C739.9 50.5 751.1 61.7 751.1 75.5V125.5H50.8754V75.5C50.8754 61.7 62.1004 50.5 75.8754 50.5ZM726.125 475.5H75.9004C62.1004 475.5 50.9004 464.3 50.9004 450.5V225.5H751.125V450.5C751.125 464.3 739.925 475.5 726.125 475.5Z" fill="black"/>
 							</svg>
-							<input type="text" class="credit-card__input credit-card__input_right_icon js-credit-mask">
+							<input type="text" id="credit-card" class="credit-card__input credit-card__input_right_icon js-credit-mask">
 						</div>
+						<div class="field-error"></div>
 					</div>
 					<div class="credit-card__field">
 						<div class="credit-card__label credit-card__label_type_requared">Valid thru (mm/yy)</div>
 						<div class="credit-card__group credit-card__group_type_flex credit-card__group_vertical_center">
 							<div class="credit-card__part">
-								<input type="text" class="credit-card__input js-credit-date">
+								<input type="text" id="credit-month" class="credit-card__input js-credit-date">
+								<div class="field-error"></div>
 							</div>
 							<div class="credit-card__separator">/</div>
 							<div class="credit-card__part">
-								<input type="text" class="credit-card__input js-credit-date">
+								<input type="text" id="credit-year" class="credit-card__input js-credit-date">
+								<div class="field-error"></div>
 							</div>
 						</div>
 					</div>
 					<div class="credit-card__field">
 						<div class="credit-card__label credit-card__label_type_requared">Cardholder's name</div>
 						<div class="credit-card__group">
-							<input type="text" class="credit-card__input credit-card__input_right_icon js-credit-name">
+							<input type="text" id="credit-name" class="credit-card__input credit-card__input_right_icon js-credit-name">
+							<div class="field-error"></div>
 						</div>
 					</div>
 				</div>
@@ -41,8 +45,9 @@
 							<div style="display:none" id="cvv-info">
 								<div class="tooltip">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, officia.</div>
 							</div>
-							<input type="text" class="credit-card__input credit-card__input_right_icon js-cvv-mask">
+							<input type="text" id="credit-cvv" class="credit-card__input credit-card__input_right_icon js-cvv-mask">
 						</div>
+						<div class="field-error"></div>
 					</div>
 				</div>
 			</div>
@@ -50,11 +55,12 @@
 		<div class="credit-card__footer">
 			<div class="credit-card__policy">
 				<label class="checkbox">
-					<input type="checkbox" class="checkbox__input js-policy-validate" name="policy" >
+					<input type="checkbox" id="policy" class="checkbox__input js-policy-validate" name="policy" >
 					<span class="checkbox__mark checkbox__mark_primary"></span>
 					<span class="checkbox__text">I accept the <a href="#" data-trigger-modal="info" class="checkbox__link js-popup" >Terms and Conditions</a>
 					</span>
 				</label>
+				<div class="field-error"></div>
 			</div>
 			<div class="credit-card__adds">
 				<button class="credit-card__submit btn btn_secondary">Place order ($624.99)</button>
