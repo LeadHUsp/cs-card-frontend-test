@@ -2,7 +2,7 @@
 import '@/styles/index.scss';
 
 // import libs
-import 'swiper/scss';
+
 import { Modal } from '@/blocks/modal/modal';
 import { ClassicTabs } from '@/js/tabs';
 import { CreditCard } from '@/blocks/credit-card';
